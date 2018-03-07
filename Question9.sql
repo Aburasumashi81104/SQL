@@ -1,7 +1,14 @@
 USE rezodb;
 
 SELECT
-	item_id, item_name, item_price, category_name 
+	category_name,
+	SUM(item_price) AS total_price
 FROM
-	item INNER JOIN item_category
-	;
+	item INNER
+		JOIN
+	item_category
+		ON
+	item_category.category_id = item.category_id
+GROUP BY
+	item_category.category_name,
+	item.category_id;
