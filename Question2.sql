@@ -1,3 +1,4 @@
+USE rezodb;
 CREATE TABLE item (
 	item_id INT NOT NULL AUTO_INCREMENT,
 	item_name VARCHAR(256) NOT NULL,
@@ -5,3 +6,4 @@ CREATE TABLE item (
 	category_id INT,
 	PRIMARY KEY (item_id)
 	);
+	
